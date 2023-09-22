@@ -14,11 +14,15 @@ public class WhenWorkingWithFloatingPointNumbers {
     @Test
     public void convertToFarenheit() {
         double celcius = 27.0d;
-        double farenheit = 0.0d;
+       // double farenheit = 80.6;
 
         // TODO: Use a floating point calculation to calculate the farenheit equivalent of the celcius value.
 
+       double farenheit = (celcius * 9/5) + 32;
+
         assertThat(farenheit, equalTo(80.6));
+
+        System.out.println("farenheit = " + farenheit);
     }
 
     //
@@ -26,13 +30,17 @@ public class WhenWorkingWithFloatingPointNumbers {
     // There are 2.20462 pounds in a kilogram
     //
     @Test
-    public void convertMetersToFeet() {
+    public void convertKilosToPounds() {
         int weightInKilograms = 50;
-        double weightInPounds = 0;
+     //   double weightInPounds = 0;
 
         // TODO: Use a floating point calculation to calculate the correct weight in pounds
 
+        double weightInPounds = (weightInKilograms * 2.20462);
+
         assertThat(weightInPounds, equalTo(110.231));
+
+        System.out.println("Weight in pounds is " + weightInPounds);
 
     }
 }
